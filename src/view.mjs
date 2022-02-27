@@ -6,8 +6,8 @@ export default class View {
   }
 
   onRecordClick(command) {
-    this.toggleAudioElement({ visible: false });
     return () => {
+      this.toggleAudioElement({ visible: false });
       command();
     };
   }
@@ -27,6 +27,7 @@ export default class View {
   }
 
   toggleAudioElement({ visible }) {
+    debugger
     const classList = this.audioElement.classList;
     visible ? classList.remove('hidden') : classList.add('hidden');
   }
